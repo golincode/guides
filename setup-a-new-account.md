@@ -70,6 +70,14 @@ Where `username` use the username you just created. You’ll be prompted to writ
 
 Now put this username and password into the spreadsheet.
 
+You should now change the default SSH shell to bash from sh.
+
+~~~:bash
+nano /etc/passwd
+~~~
+
+Scroll to the bottom (Control+V in Nano) and change `sh` to `bash` at the end of the line. If ZSH is available on the server, you can use `zsh`.
+
 5. Setup Apache configuration
 -----------------------------
 
