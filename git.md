@@ -15,5 +15,5 @@ Tower:
 
 Command line:
 ~~~
-git pull merge --pull
+git pull --rebase
 ~~~
