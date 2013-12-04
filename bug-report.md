@@ -8,9 +8,11 @@ A bug report should have the following sections:
 - [What Actually Happened](#what-actually-happened)
 - [Environment Details](#environment-details)
 
-#### Title
+### Title
 
 A short (< 100 characters) overview of the issue to distinguish it from others. This should not include specifics.
+
+### Description
 
 #### What I Did
 
@@ -33,3 +35,30 @@ The temptation is to only write this section, but it's often useless, or at the 
 The details of the computer, browser, etc. that the person is experiencing this in, or any other details about their setup.
 
 For websites, this should be a pdf report from [Support Details](http://supportdetails.com/). Not someone saying 'IE'. We need *details* - versions, OS details, etc.
+
+### Assignee
+
+Who’s responsible for completing the job, if unknown leave blank so we can find them.
+
+### Kind
+
+- Bug: something that doesn’t work the way it should
+- Enhancement: making a feature that already exists better
+- Proposal: just an idea we’re playing with
+- Task: Something that’s missing or a chore
+
+### Priority
+
+- Trivial: would be nice to have
+- Minor: required, but not before more important issues
+- Major: required
+- Critical: required, before all other issues in this project
+- Blocker: required, before all other issues
+
+### Component
+
+Part of the project that is effected.
+
+### Milestone
+
+For when it should be completed by.
