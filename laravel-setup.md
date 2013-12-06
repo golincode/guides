@@ -33,7 +33,7 @@ chmod -R 777 app/storage
 
 ###### Environment
 
-Set your environment in `bootstrap/start.php` (you can find out your machine name by running `hostname` on the command line)
+Set your environment in `bootstrap/start.php` (you can find out your machine name by running `hostname` on the command line), **then assume unchanged this file**
 
 ###### Database
 
