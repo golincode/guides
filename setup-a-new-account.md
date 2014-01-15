@@ -87,6 +87,12 @@ Create a new config file with the username you just created and edit it.
 nano /etc/apache2/sites-available/username
 ~~~
 
+Apache 2.4 requires the addition of .conf to the end of the username.
+
+~~~:bash
+nano /etc/apache2/sites-available/username.conf
+~~~
+
 Edit the file in your choice of text editor, filling in the username where appropriate.
 
 ~~~:apacheconf
