@@ -36,7 +36,7 @@ Add the information required across the page:
 2. Step Two
 -----------
 
-...
+[...](https://www.youtube.com/watch?v=tO5sxLapAts)
 
 3. Connect to the Server
 ------------------------
