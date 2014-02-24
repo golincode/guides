@@ -105,8 +105,11 @@ Edit the file in your choice of text editor, filling in the username where appro
     <Directory /home/username/public>
         Options Indexes FollowSymLinks MultiViews
         AllowOverride All
-        Order allow,deny
-        Allow from all
+        # Apache < 2.4
+        #Order allow,deny
+        #Allow from all
+        # Apache >= 2.4
+        Require all granted
     </Directory>
 
     ErrorLog ${APACHE_LOG_DIR}/username-error.log
