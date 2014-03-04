@@ -1,7 +1,9 @@
 Setup Cloud Server Backups
 ==========================
 
-This will help you setup backups on the Rackspace cloud servers.
+This will help you setup backups on the Rackspace cloud servers. This is for the Architect Ubuntu-based servers.
+
+More information (really exactly the same information as below!): http://www.rackspace.com/knowledge_center/article/rackspace-cloud-backup-install-the-agent#installubuntu
 
 1. Step One
 --------
