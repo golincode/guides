@@ -14,33 +14,14 @@ When this is installed, run the installation command:
 
 This should install the dependencies needed to deploy the app, namely [Capistrano](http://capistranorb.com).
 
-This will also install the Cap::Laravel gem, please follow its [documentation](https://github.com/wearearchitect/cap-laravel) to add its tasks to Capistrano's own.
+To add Capistrano to your app, from the root of your app, run:
 
-To check they are in place, run `cap -vT`, you should see a list featuring the following:
+	$ cap install
 
-	cap artisan:app:storage            # Make the storage dir more accessible
-	cap artisan:db:migrate             # Perform database migrations
-	cap artisan:db:refresh             # Refresh database schema
-	cap artisan:db:seed[class]         # Seed the database / Seed an individual class
-	cap assets:bower                   # Run the bower command
-	cap assets:grunt                   # Run the grunt command
-	cap assets:npm                     # Install node components
-	cap composer:install               # Install composer packages
-	cap composer:update                # Update installed composer packages
+This will 'capify' your app, and put in place the necessary files and folders.
 
-If there are all in the list, you are ready to deploy!
+After configuring your deployment, you can kick off a deployment with:
 
-## Additional Details
+	$ cap ENV deploy
 
-The Cap::Laravel gem is setup to just run from the get-go, the tasks it runs are pre-hooked and will be fired off when performing a deploy.
-
-The following tasks don't run by default:
-
-- `artisan:db:refresh`
-- `artisan:db:seed[class]`
-- `assets:bower`
-- `composer:update`
-
-These are optional tasks, and can be performed on an ad-hoc basis.
-
-It is possible to disable the running of migrations and compilations of assets, please consult the documentation linked earlier for instructions on how to do this.
+Where ENV is the environment you are deploying to, e.g. `staging` or `production`.
