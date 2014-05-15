@@ -9,4 +9,5 @@ Helpers to help you develop.
 - [Working with Git](git.md)
 - [Setting up Laravel Projects](laravel-setup.md)
 - [Makefile 101](makefile.md)
+- [Setting up Ruby on your system](setup-ruby.md)
 - [Setting up Capistrano in a project](setup-capistrano.md)
