@@ -2,6 +2,18 @@
 
 The recommended approach for managing Ruby on your system is to use **rbenv**.
 
+## tl;dr / cba
+
+Rune the following in your command line:
+
+	$ curl https://raw.githubusercontent.com/wearearchitect/guides/master/install_ruby.sh | bash
+
+Then restart your terminal, you should now have rbenv installed, along with Ruby 2.1.1
+
+Check with:
+
+	$ ruby -v
+
 ## With Homebrew
 
 I would recommend using [Homebrew](http://brew.sh) on your system to install rbenv, which is not difficult to do otherwise, but it makes installing various other components onto your system even easier.
