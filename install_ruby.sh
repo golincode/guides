@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
 # is git installed?
-which -s git || echo "git not installed"; exit
-
-echo "git installed"; exit
+which -s git
+if [[ $? != 0 ]]; then
+    echo "git not installed"; exit
+fi
 
 # is rvm installed?
 which -s rvm
