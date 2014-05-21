@@ -16,7 +16,7 @@ Next you need to add a line to your profile to enable the rbenv shims and autoco
 
 - Mac Bash: `echo 'eval "$(rbenv init -)"' >> ~/.bash_profile`
 - Linux Bash: `echo 'eval "$(rbenv init -)"' >> ~/.bashrc`
-- ZSH `echo: 'eval "$(rbenv init -)"' >> ~/.zshrc`
+- ZSH `echo 'eval "$(rbenv init -)"' >> ~/.zshrc`
 
 ## Without Homebrew (using Git)
 
@@ -34,7 +34,7 @@ Next you need to add a line to your profile to enable the rbenv shims and autoco
 
 - Mac Bash: `echo 'eval "$(rbenv init -)"' >> ~/.bash_profile`
 - Linux Bash: `echo 'eval "$(rbenv init -)"' >> ~/.bashrc`
-- ZSH `echo: 'eval "$(rbenv init -)"' >> ~/.zshrc`
+- ZSH `echo 'eval "$(rbenv init -)"' >> ~/.zshrc`
 
 Then install ruby-build:
 
