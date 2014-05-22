@@ -4,7 +4,13 @@ The recommended approach for managing Ruby on your system is to use **rbenv**.
 
 ## tl;dr / cba
 
-Rune the following in your command line:
+If you have RVM installed, please remove it:
+
+	$ rvm implode
+
+You may need to remove some lines from your shell profile (.bash_profile / .zshrc) to get this finished.
+
+Run the following in your command line:
 
 	$ curl https://raw.githubusercontent.com/wearearchitect/guides/master/install_ruby.sh | bash
 
@@ -12,7 +18,7 @@ Then restart your terminal, you should now have rbenv installed, along with Ruby
 
 Check with:
 
-	$ ruby -v
+	$ ruby -v	
 
 ## With Homebrew
 

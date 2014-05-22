@@ -6,17 +6,11 @@ if [[ $? != 0 ]]; then
     echo "git not installed"; exit
 fi
 
-# is rvm installed?
-which -s rvm
-if [[ $? == 0 ]]; then
-    rvm implode
-fi
-
 # is brew installed?
 which -s brew
 if [[ $? != 0 ]] ; then
     git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-    if [[ -e "~/.zshrc" ]]; then
+    if [[ -e ~/.zshrc ]]; then
         echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
     else
         echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
@@ -27,7 +21,7 @@ else
     brew install rbenv ruby-build
 fi
 
-if [[ -e "~/.zshrc" ]]; then
+if [[ -e ~/.zshrc ]]; then
     echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 else
     echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
