@@ -1,3 +1,5 @@
+su - vagrant
+
 git clone https://github.com/sstephenson/rbenv.git {$HOME}/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> {$HOME}/.bashrc
 echo 'eval "$(rbenv init -)"' >> {$HOME}/.bashrc
