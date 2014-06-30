@@ -1,4 +1,4 @@
-Laravel Layou Guide
+Laravel Layout Guide
 ===================
 
 
