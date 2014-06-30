@@ -1,15 +1,20 @@
-su - vagrant
+if [[ ! -d ~/.rbenv ]]; then
+  echo "Installing rbenv"
+  git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+  echo "Adding shims / etc"
+  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+  echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+  echo "Installing ruby-build"
+  git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+  echo "Installing Gem Rehash"
+  git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
+  echo "Installing Bundle Exec"
+  git clone https://github.com/maljub01/rbenv-bundle-exec.git ~/.rbenv/plugins/rbenv-bundle-exec
+fi
 
-git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
-git clone https://github.com/maljub01/rbenv-bundle-exec.git ~/.rbenv/plugins/rbenv-bundle-exec
+/home/vagrant/.rbenv/bin/rbenv install -s 2.1.2
+/home/vagrant/.rbenv/bin/rbenv global 2.1.2
 
-source ~/.rbenv
+source ~/.bashrc
 
-rbenv install 2.1.1
-rbenv global 2.1.1
-
-gem install bundler
+/home/vagrant/.rbenv/shims/gem install bundler
