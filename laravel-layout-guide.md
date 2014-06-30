@@ -32,4 +32,4 @@ Comment everything or you'll die a horrible, horrile death!!
 
 ## Example
 
-Example model [here](https://github.com/wearearchitect/guides/blob/master/laravel-model-layout-example.md).
+Example model [here](https://github.com/wearearchitect/guides/blob/master/laravel-model-layout-example.php).
