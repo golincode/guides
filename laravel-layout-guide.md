@@ -39,7 +39,9 @@ The recommended order is as such:
 
 Sections are separated like thus:
 
-//////////  Section Name  //////////
+    /**
+     * ! Section Name
+     */
 
 ### Example
 
@@ -47,4 +49,4 @@ See an [example model](https://github.com/wearearchitect/guides/blob/master/lara
 
 ### Comments
 
-Comment everything or you'll die a horrible, horrile death!!
+Comment everything or you'll die a horrible, horrible death!!
