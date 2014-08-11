@@ -1,38 +1,10 @@
-<?php
-
-namespace Module;
+<?php namespace Module;
 
 use Auth;
 use User\User;
 use Carbon\Carbon as Carbon;
 use I18n\Translatable as Eloquent;
 
-
-/**
- * Ok, so I've decided to standardise the layout of these Models
- * as they were getting a little out of hand. Please layout like
- * thus from now on:
- *
- *   - Class Attributes
- *   - Constructors
- *   - Relationships          http://bit.ly/1kSnB2h
- *   - Model Events           http://bit.ly/1kcQpfQ
- *   - Accessors & Mutators   http://bit.ly/UnWpOc
- *   - Date Mutators          http://bit.ly/1uJRMup
- *   - Query Scopes           http://bit.ly/SrfKMz
- *   - Custom Methods
- *   - Magic Methods
- *
- * You can separate different sections like thus:
- *
- * //////////  Section Name  //////////
- *
- *
- * Also, COMMENT EVERYTHING!!
- * In the future pull requests will be rejected if methods / attributes don't have comments
- * on them.
- *
- */
 class Module extends Eloquent {
 
 
@@ -345,6 +317,5 @@ class Module extends Eloquent {
 		// Wipe the original values
 		$this->original = [];
 	}
-
 
 }
