@@ -7,8 +7,9 @@ use I18n\Translatable as Eloquent;
 
 class Module extends Eloquent {
 
-
-	//////////  Class Attributes  //////////
+	/**
+	 * ! Class Attributes
+	 */
 
 	/**
 	 * The date column to use for unpublishing
@@ -27,8 +28,9 @@ class Module extends Eloquent {
 	 */
 	protected $attributes = ['published_at'];
 
-
-	//////////  Constructors  //////////
+	/**
+	 * ! Constructors
+	 */
 
 	/**
 	 * Module constructor.
@@ -51,8 +53,9 @@ class Module extends Eloquent {
 
 	}
 
-
-	//////////  Relationships  //////////
+	/**
+	 * ! Relationships
+	 */
 
 	/**
 	 * The Module's parent Study
@@ -144,8 +147,9 @@ class Module extends Eloquent {
 																		->where('user_id', $user->id);
 	}
 
-
-	//////////  Model Events  //////////
+	/**
+	 * ! Model Events
+	 */
 
     /**
      * When deleting a Module make sure delete is
@@ -162,8 +166,9 @@ class Module extends Eloquent {
 		return parent::delete();
 	}
 
-
-	//////////  Accessors & Mutators  //////////
+	/**
+	 * ! Accessors & Mutators
+	 */
 
 	/**
 	 * Calculate the progress
@@ -186,8 +191,9 @@ class Module extends Eloquent {
 		return $completed / $this->lessons()->count() * 100;
 	}
 
-
-	//////////  Query Scopes  //////////
+	/**
+	 * ! Query Scopes
+	 */
 
 	/**
 	 * Limit the query to Modules that have
@@ -278,8 +284,9 @@ class Module extends Eloquent {
 
 	}
 
-
-	//////////  Custom Methods  //////////
+	/**
+	 * ! Custom Methods
+	 */
 
 	/**
 	 * Returns whether the current User has started the Module
@@ -294,8 +301,9 @@ class Module extends Eloquent {
 		return $this->progress()->count() > 0;
 	}
 
-
-	//////////  Magic Methods  //////////
+	/**
+	 * ! Magic Methods
+	 */
 
 	/**
 	 * Allow this class to be cloned.
