@@ -1,6 +1,16 @@
 Laravel Layout Guide
 ===================
 
+## General Notes
+
+Laravel’s guide is similar to PSR, but with these key differences:
+
+- Class braces `{` appear on the same line as the class
+- Function and control braces `{` appear on the next line ([Allman style](http://en.wikipedia.org/wiki/Indent_style#Allman_style))
+- Use tabs rather than spaces to indent
+- Namespace declarations should be on the same line as `<?php`
+- Interface and Trait names are suffixed with `Interface` (`FooInterface`) and `Trait` (`FooTrait`) respectively
+
 ## Controllers
 
 ### Example
