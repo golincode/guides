@@ -50,7 +50,6 @@ class Module extends Eloquent {
 								], true);
 
 		parent::__construct($attributes);
-
 	}
 
 	/**
@@ -77,10 +76,10 @@ class Module extends Eloquent {
 	 *
 	 * @return LocalModule
 	 */
-    public function localModules()
-    {
+	public function localModules()
+	{
 		return $this->hasOne('Module\LocalModule');
-    }
+	}
 
 	/**
 	 * The Module's Lessons
@@ -92,8 +91,7 @@ class Module extends Eloquent {
 	 */
 	public function lessons()
 	{
-		return $this->hasMany('Lesson\Lesson')
-										->orderBy('order');
+		return $this->hasMany('Lesson\Lesson')->orderBy('order');
 	}
 
 	/**
@@ -143,22 +141,22 @@ class Module extends Eloquent {
 		if ( is_null($user) )
 			$user = Auth::user();
 
-		return $this->hasManyThrough('Module\Progress', 'Lesson\Lesson', 'module_id', 'lesson_id' )
-																		->where('user_id', $user->id);
+		return $this->hasManyThrough('Module\Progress', 'Lesson\Lesson', 'module_id', 'lesson_id')
+			->where('user_id', $user->id);
 	}
 
 	/**
 	 * ! Model Events
 	 */
 
-    /**
-     * When deleting a Module make sure delete is
-     * cascaded onto all it's LocalModules
-     *
-     * @access public
-     *
-     * @return boolean
-     */
+	/**
+	 * When deleting a Module make sure delete is
+	 * cascaded onto all it's LocalModules
+	 *
+	 * @access public
+	 *
+	 * @return boolean
+	 */
 	public function delete()
 	{
 		$this->translations()->delete();
