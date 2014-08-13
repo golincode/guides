@@ -11,6 +11,14 @@ Laravel’s guide is similar to PSR, but with these key differences:
 - Namespace declarations should be on the same line as `<?php`
 - Interface and Trait names are suffixed with `Interface` (`FooInterface`) and `Trait` (`FooTrait`) respectively
 
+## PHP preferences
+
+### Arrays should be written using square brackets.
+
+Correct: `['orange', 'apple', 'iguana']`
+
+Incorrect: `array('orange', 'apple', 'iguana')`
+
 ## Controllers
 
 ### Example
