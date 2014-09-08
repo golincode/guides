@@ -32,3 +32,15 @@ Command line:
 ```bash
 git pull --rebase
 ```
+
+Ignore
+------
+
+The following files should nearly always be ignored:
+
+* npm-debug.log
+* composer.phar
+* .DS_Store
+* .sass-cache
+* node_modules
+* /vendor
