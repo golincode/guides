@@ -3,7 +3,7 @@ Working with Git
 
 1. [Pulling](#pulling)
 1. [Assume Unchanged-ing](#assume-unchanged)
-1. [Ignore](#ognore)
+1. [Ignore](#ignore)
 
 Assume Unchanged
 ----------------
