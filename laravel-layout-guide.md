@@ -19,6 +19,27 @@ Correct: `['orange', 'apple', 'iguana']`
 
 Incorrect: `array('orange', 'apple', 'iguana')`
 
+### Namespace Imports
+
+Divide namespace imports into three sections, separated by a blank line. Each section should be ordered alphabetically:
+
+1. Globals - this is anything that is in the global namespace. In Laravel, for example, the facades could go here.
+2. Libraries - third party classes. Basically, anything in the vendor folder
+3. Project - this is for classes in the current project. Basically, any classes in the app folder, or that is prefixed by the app’s namespace
+
+```php
+<?php namespace App\Auth;
+
+use Auth;
+use Request;
+
+use Carbon\Carbon;
+use Illuminate\Contracts\Auth\User;
+use Illuminate\Support\Filesystem;
+
+use App\Support\Security;
+```
+
 ## Controllers
 
 ### Example

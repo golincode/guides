@@ -1,7 +1,11 @@
-<?php namespace Guide;
+<?php namespace App\Guide;
 
+use Redirect;
 use Response;
 use View;
+
+use App\Camels\CamelRepository;
+use App\Mammals\MammalTrait;
 
 class CamelCaseController extends Controller {
 

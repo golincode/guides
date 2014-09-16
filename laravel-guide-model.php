@@ -1,9 +1,11 @@
-<?php namespace Module;
+<?php namespace App\Module;
 
 use Auth;
-use User\User;
+
 use Carbon\Carbon as Carbon;
-use I18n\Translatable as Eloquent;
+
+use App\I18n\Translatable as Eloquent;
+use App\User\User;
 
 class Module extends Eloquent {
 
