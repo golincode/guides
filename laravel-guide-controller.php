@@ -22,7 +22,7 @@ class CamelCaseController extends Controller {
 	 * @access public
 	 * @return obj Redirect to list of camels
 	 */
-	public function redirectToLogin()
+	public function store()
 	{
 		$this->repo->storeCamel();
 
