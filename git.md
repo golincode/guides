@@ -4,7 +4,7 @@ Working with Git
 1. [Pulling](#pulling)
 1. [Assume Unchanged-ing](#assume-unchanged)
 1. [Ignore](#ignore)
-1. [composer.lock](#composer-lock)
+1. [composer.lock](#composerlock)
 
 Assume Unchanged
 ----------------
