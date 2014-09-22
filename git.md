@@ -4,6 +4,7 @@ Working with Git
 1. [Pulling](#pulling)
 1. [Assume Unchanged-ing](#assume-unchanged)
 1. [Ignore](#ignore)
+1. [composer.lock](#composer-lock)
 
 Assume Unchanged
 ----------------
@@ -45,3 +46,12 @@ The following files should nearly always be ignored:
 * .sass-cache
 * node_modules
 * /vendor
+
+`composer.lock`
+---------------
+
+The Composer lock file should be treated differently depending on the status of the project:
+
+- In development: keep the file listed in the `.gitignore` file and never commit. Each developer and server generates its own lock file.
+
+- After launch: once a production server is setup and stable, a `composer.lock` file should be committed. However, this’ll be for production and will not contain things you need to develop with, such as test packages. Therefore after creating the lock file, you should [assume unchanged](#assume-unchanged) and not commit your updates to it.
