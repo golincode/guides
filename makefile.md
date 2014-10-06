@@ -50,46 +50,16 @@ but running `make composer` would just output `composer install`'s normal output
 You can use variables in Makefiles. Default values are typically declared at the top of the Makefile
 
 ```bash
-output_dir = output
+OUTPUT_DIR=output
 
 output:
-	mkdir -p $(output_dir)
+	mkdir -p $(OUTPUT_DIR)
 ```
 
 Running `make output` will create a directory - `output`
 
-Running `make output output_dir=other/directory` will create the directory `directory`, inside `other`.
+Running `make output OUTPUT_DIR=other/directory` will create the directory `directory`, inside `other`.
 
-## PHP
+## Samples
 
-Here is a sample PHP makefile
-
-```bash
-install: clean
-	@composer install
-
-test:
-	@phpunit
-
-clean-test:
-	@rm -rf report
-
-coverage:
-	@phpunit --coverage-html ./report
-
-report: coverage
-	@open ./report/index.html
-
-clean: clean-test
-	@rm -rf vendor
-	@rm -f composer.lock
-
-todo:
-	@echo "@TODO"
-	@echo "====="
-	@grep -rn "@TODO" . | awk -F ":" '$$1 != "./Makefile" {print $$3; print $$1 $$2  }'
-	@echo
-	@echo "@todo"
-	@echo "====="
-	@grep -rn "@todo" . | awk -F ":" '$$1 != "./Makefile" {print $$3; print $$1 $$2  }'
-```
+- [PHP](Makefile-PHP)
