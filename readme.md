@@ -16,6 +16,7 @@ On tools
 
 On code
 -------
+- [PHP Code Style Rules](php/style-guide.md)
 - [Working with Git](git/git.md)
 - [Setting up Laravel Projects](php/laravel-setup.md)
 - [Makefile 101](make/makefile.md)
