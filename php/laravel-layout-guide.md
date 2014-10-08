@@ -44,7 +44,7 @@ use App\Support\Security;
 
 ### Example
 
-See an [example controller](https://github.com/wearearchitect/guides/blob/master/laravel-guide-controller.php).
+See an [example controller](https://github.com/wearearchitect/guides/blob/master/php/laravel-guide-controller.php).
 
 ## Models
 
@@ -74,7 +74,7 @@ Sections are separated like thus:
 
 ### Example
 
-See an [example model](https://github.com/wearearchitect/guides/blob/master/laravel-guide-model.php).
+See an [example model](https://github.com/wearearchitect/guides/blob/master/php/laravel-guide-model.php).
 
 ### Comments
 

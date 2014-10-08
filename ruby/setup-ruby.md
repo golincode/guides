@@ -12,13 +12,13 @@ You may need to remove some lines from your shell profile (.bash_profile / .zshr
 
 Run the following in your command line:
 
-	$ curl https://raw.githubusercontent.com/wearearchitect/guides/master/install_ruby.sh | bash
+	$ curl https://raw.githubusercontent.com/wearearchitect/guides/master/ruby/install_ruby.sh | bash
 
 Then restart your terminal, you should now have rbenv installed, along with Ruby 2.1.1
 
 Check with:
 
-	$ ruby -v	
+	$ ruby -v
 
 ## With Homebrew
 

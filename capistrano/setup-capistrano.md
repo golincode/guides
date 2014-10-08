@@ -51,9 +51,9 @@ This will 'capify' your app, and put in place the necessary files and folders, r
 
 The main files here are `config/deploy.rb` and those in `config/deploy`.
 
-An example `deploy.rb` can be found [here](capistrano/deploy.rb).
+An example `deploy.rb` can be found [here](deploy.rb).
 
-An example environment file can be found [here](capistrano/env.rb) (it has staging defaults within it).
+An example environment file can be found [here](env.rb) (it has staging defaults within it).
 
 After configuring your deployment, you can kick off a deployment with:
 
