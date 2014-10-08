@@ -1,0 +1,36 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# phpstorm
+.idea
+
+# Composer
+composer.phar
+
+# Sass
+.sass-cache
+
+# Node
+/node_modules
+/npm-debug.log
+
+# Laravel
+/bootstrap/compiled.php
+/vendor
+/app/config/local
+.env.*.php
+.env.php
+
+# Hide var files
+/public/_*
+/public/var/*
+
+# Testing
+/report/
+
+# Bower
+/public/components
+
+# bower
+/bower_components
