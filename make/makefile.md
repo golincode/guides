@@ -60,6 +60,16 @@ Running `make output` will create a directory - `output`
 
 Running `make output OUTPUT_DIR=other/directory` will create the directory `directory`, inside `other`.
 
+## Variable dependancies
+
+Variables can also be expanded and used in dependancies - for example:
+
+```bash
+THE_ENV='test'
+
+install: install-$(THE_ENV)
+```
+
 ## Samples
 
 - [PHP](Makefile-PHP)
