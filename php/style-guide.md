@@ -25,6 +25,7 @@
 - Namespace declarations should be on the opening line, with `<?php`
 - Keep lines short and concise: 80 - 130 lines is a soft limit
 - Use `!=` instead of `<>`
+- If parentheses are not needed in a constructor, don't use them (good: `$user = new User;`; bad: `$user = new User();`)
 
 ## Cases
 
