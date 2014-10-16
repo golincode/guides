@@ -24,6 +24,7 @@
 - Class definitions have the opening bracket `{` on the same line
 - Namespace declarations should be on the opening line, with `<?php`
 - Keep lines short and concise: 80 - 130 lines is a soft limit
+- Use `!=` instead of `<>`
 
 ## Cases
 
