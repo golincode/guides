@@ -20,6 +20,7 @@
 - Use square bracket array syntax
   - `[1, 2, 3]` - yes
   - `array(1, 2, 3)` - no
+- When using multi-line arrays, always end each line with a comma (including the final line)
 - Opening brackets `{` go on a new line for everything, apart from…
 - Class definitions have the opening bracket `{` on the same line
 - Namespace declarations should be on the opening line, with `<?php`
