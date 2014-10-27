@@ -4,11 +4,8 @@ set :branch, 'develop'
 
 set :deploy_to, '/var/www/site.domain.com'
 
+# When running in production, add the '--no-interation' flag, else migrations won't take palce
 set :laravel_artisan_flags, '--env=staging'
-
-set :default_env, {
-  'PATH' => "#{shared_path}/bin:/opt/rbenv/shims:/usr/local/src/nvm/current/bin:$PATH"
-}
 
 # Simple Role Syntax
 # ==================
@@ -25,3 +22,12 @@ role :web, %w{deploy@site.domain.com}
 # something that quacks like a hash can be used to set
 # extended properties on the server.
 server 'site.domain.com', user: 'deploy', roles: %w{web app}
+
+# When using the cap-ec2 gem
+# ==========================
+# When using this gem, you should delete the existing role and server definitions,
+# as the gem will work out which server to deploy to based upon several tags on
+# the server that match up to the attributes set in the Capistrano files.
+#
+# ec2_role :web, user: 'deploy', ssh_options: { auth_methods: %w(publickey) }
+# ec2_role :app, user: 'deploy', ssh_options: { auth_methods: %w(publickey) }

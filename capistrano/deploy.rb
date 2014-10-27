@@ -18,8 +18,19 @@ set :rbenv_ruby, '2.1.2'
 set :rbenv_map_bins, %w{gem bundle}
 set :rbenv_custom_path, '/opt/rbenv'
 
+# cap-ec2
+# If you are using the cap-ec2 gem, and do not currently have any AWS access keys,
+# please ask the DevOps team for some
+# You can test this by running `cap ENV ec2:status`, where ENV is a server environment
+# When using the cap-ec2 Gem, uncomment these lines:
+# set :ec2_access_key_id, ENV['AWS_ACCESS_KEY']
+# set :ec2_secret_access_key, ENV['AWS_SECRET_KEY']
+# set :ec2_region, %w{ eu-west-1 }
+
 set :bower_flags, "--production --silent --config.interactive=false"
 set :npm_flags, "--production --silent --no-spin"
+
+set :default_env, { path: "#{shared_path}/bin:/opt/rbenv/shims:/usr/local/src/nvm/v0.10.29/bin:$PATH" }
 
 namespace :deploy do
 
