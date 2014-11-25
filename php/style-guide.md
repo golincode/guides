@@ -29,6 +29,9 @@
 - If parentheses are not needed in a constructor, don't use them:
   - good: `$user = new User;`
   - bad: `$user = new User();`
+- Limit injected dependancies to five per class, but aim for three or fewer - five is the *upper limit*.
+- Use no more than two levels of indentation within methods.
+- If the code block in an if clause returns or throws something, do not use the `else` clause - simply carry on with the regular code flow.
 
 ## Cases
 
@@ -39,6 +42,9 @@
 - Constants use SNAKE_CAPS - `$job == Job::FRONT_END_DEV`
 
 ## Names
+
+- Be as explicit as possible. If it is a class / method name, for example, its responsibility (see Single Responsitbility Principle) should be obvious from the name.
+- Avoid abbreviating class and variable names.
 
 ### Variables
 
