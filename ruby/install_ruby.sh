@@ -30,5 +30,5 @@ fi
 git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 git clone https://github.com/maljub01/rbenv-bundle-exec.git ~/.rbenv/plugins/rbenv-bundle-exec
 
-rbenv install 2.1.1
-rbenv global 2.1.1
+rbenv install 2.1.2
+rbenv global 2.1.2

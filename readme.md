@@ -21,4 +21,5 @@ On code
 - [Setting up Laravel Projects](php/laravel-setup.md)
 - [Makefile 101](make/makefile.md)
 - [Setting up Ruby on your system](ruby/setup-ruby.md)
+- [Adding Ruby to your Homestead box](ruby/homestead-ruby.md)
 - [Setting up Capistrano in a project](capistrano/setup-capistrano.md)
