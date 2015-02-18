@@ -14,7 +14,7 @@ Run the following in your command line:
 
 	$ curl https://raw.githubusercontent.com/wearearchitect/guides/master/ruby/install_ruby.sh | bash
 
-Then restart your terminal, you should now have rbenv installed, along with Ruby 2.1.1
+Then restart your terminal, you should now have rbenv installed, along with Ruby 2.2.0
 
 Check with:
 
@@ -72,10 +72,10 @@ Install the Bundle Exec plugin, this will prepend `bundle exec` to certain comma
 
 Rbenv will support multiple versions of Ruby and in turn, multiple gem versions. To install a Ruby, run:
 
-	$ rbenv install 2.1.1
+	$ rbenv install 2.2.0
 
 When this has completed, run:
 
-	$ rbenv global 2.1.1
+	$ rbenv global 2.2.0
 
 This will set your global Ruby to the specified version.
