@@ -21,8 +21,8 @@
   - `[1, 2, 3]` - yes
   - `array(1, 2, 3)` - no
 - When using multi-line arrays, always end each line with a comma (including the final line)
-- Opening brackets `{` go on a new line for everything, apart from…
-- Class definitions have the opening bracket `{` on the same line
+- Opening brackets `{` go on a new line for everything, apart from:
+  - Class definitions, which have the opening bracket `{` on the same line
 - Namespace declarations should be on the opening line, with `<?php`
 - Keep lines short and concise: 80 - 130 lines is a soft limit
 - Use `!=` instead of `<>`
@@ -142,4 +142,4 @@ $query->where( 'age', '>', '18' )     // returns query object
 ### Single Responsibility
 
 - Keep classes and methods, to one responsibility.
-- Try should be able to describe the class or method without using the word 'and'
+- Try to describe the class or method without using the word 'and'
