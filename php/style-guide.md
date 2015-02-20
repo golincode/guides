@@ -137,6 +137,56 @@ $query->where( 'age', '>', '18' )     // returns query object
         ->map( $mapFunction );        // returns results object
 ```
 
+## Doc Blocks
+
+Docblocks must exist on **every** method, function and property.
+
+They should contain a short description (ie. should not make the line exceed 80 characters).
+
+### Properties
+
+A description, type, and access specifier for any property.
+
+```php
+class Thing {
+
+  /**
+   * Short Description
+   *
+   * @access public
+   * @var \App\ParentCollection
+   */
+  public $parents;
+
+}
+```
+
+### Functions & Methods
+
+Functions and methods should contain at least
+- a short description
+- a summary of input arguments
+- a return type
+
+The short description should ideally describe what the function does - without using the word "and". This is a basic test for [single responsibility](#single-responsibility).
+It should describe **what** the function does, not **how** it does it - ie. if it calls other functions or methods, it does not need to describe what they do.
+
+If an input argument is an object, be specific about what the object is. Use the full class name, with a `\` dereferencer at the start.
+
+```php
+/**
+ * Read the contents of the file at the given path
+ *
+ * Details about optional arguments, etc.
+ *
+ * @param  \App\Support\File    $file
+ * @param  array                $options
+ * @param  boolean              $delete
+ * @return void
+ */
+public function readFile( File $file, $options = [], $delete = false )
+```
+
 ## Principles
 
 ### Single Responsibility
