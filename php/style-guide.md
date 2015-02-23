@@ -172,6 +172,10 @@ Functions and methods should contain at least
 The short description should ideally describe what the function does - without using the word "and". This is a basic test for [single responsibility](#single-responsibility).
 It should describe **what** the function does, not **how** it does it - ie. if it calls other functions or methods, it does not need to describe what they do.
 
+It should be in the [imperative mood](http://en.wikipedia.org/wiki/Imperative_mood) - describing what the function does in plain english:
+- Imperative (yes): `Convert User model into array`
+- Not Imperative (no): `Converts user to array`
+
 If an input argument is an object, be specific about what the object is. Use the full class name, with a `\` dereferencer at the start.
 
 ```php
