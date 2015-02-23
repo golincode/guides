@@ -9,6 +9,7 @@
   - [Interfaces and Traits](#interfaces-and-traits)
 - [Namespaces](#namespaces)
 - [Structure](#structure)
+- [Doc Blocks](#doc-blocks)
 - [Principles](#principles)
   - [Single Responsibility](#single-responsibility)
 
