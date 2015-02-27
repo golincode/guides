@@ -69,6 +69,8 @@ To check your tasks are loaded, run `cap -vT` to list out the tasks Capistrano i
 
 ## Deploy
 
+Before you deploy you should run the `ssh-add` command, this will forward your SSH key so the git repo can be accessed via your key.
+
 After configuring your deployment, you can kick off a deployment with:
 
 	$ cap ENV deploy
