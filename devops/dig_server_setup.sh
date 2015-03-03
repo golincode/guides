@@ -45,6 +45,9 @@ curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
 nvm install 0.12.0
 nvm alias default 0.12.0
 
+# Install grunt
+npm install -g grunt-cli
+
 # Install Ruby 2.2.0 & Bundler
 curl https://raw.githubusercontent.com/wearearchitect/guides/master/ruby/rhel_ruby.sh | bash
 
