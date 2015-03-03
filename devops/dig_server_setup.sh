@@ -36,6 +36,10 @@ chmod 0600 /swapfile
 export PROFILE="~/.bashrc"
 curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
 
+# Install node
+nvm install 0.12.0
+nvm alias default 0.12.0
+
 # Install Ruby 2.2.0 & Bundler
 curl https://raw.githubusercontent.com/wearearchitect/guides/master/ruby/rhel_ruby.sh | bash
 
