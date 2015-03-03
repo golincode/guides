@@ -1,3 +1,7 @@
+# update packages and remove obsolete ones
+echo "Updating..."
+yum update
+
 # get apache the fuck off this system
 echo "Remove Apache et al from the system"
 yum erase httpd httpd-tools apr apr-util
@@ -18,3 +22,8 @@ fi
 
 # Add ll to profile
 echo 'alias ll="ls -alh --color"' >> ~/.bashrc
+
+
+
+# Install Ruby 2.2.0
+curl https://raw.githubusercontent.com/wearearchitect/guides/master/ruby/rhel_ruby.sh | bash
