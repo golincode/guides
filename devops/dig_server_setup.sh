@@ -4,7 +4,7 @@ yum erase httpd httpd-tools apr apr-util
 
 # update packages and remove obsolete ones
 echo "Updating..."
-yum -y update
+yum -y upgrade
 
 # install stuff we need, php/nginx/etc
 echo "Installing required packages..."
