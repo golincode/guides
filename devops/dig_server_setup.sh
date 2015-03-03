@@ -25,5 +25,9 @@ echo 'alias ll="ls -alh --color"' >> ~/.bashrc
 
 
 
-# Install Ruby 2.2.0
+# Install Ruby 2.2.0 & Bundler
 curl https://raw.githubusercontent.com/wearearchitect/guides/master/ruby/rhel_ruby.sh | bash
+
+source ~/.bashrc
+
+gem install bundler
