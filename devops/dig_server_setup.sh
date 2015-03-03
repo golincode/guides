@@ -68,6 +68,8 @@ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 git clone https://github.com/maljub01/rbenv-bundle-exec.git ~/.rbenv/plugins/rbenv-bundle-exec
 
+source ~/.bashrc
+
 RUBY_CONFIGURE_OPTS=--enable-shared rbenv install -s 2.2.0
 rbenv global 2.2.0
 
