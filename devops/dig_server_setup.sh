@@ -32,13 +32,14 @@ echo 0 | sudo tee /proc/sys/vm/swappiness
 chown root:root /swapfile
 chmod 0600 /swapfile
 
-# Install nvm
-export PROFILE="/home/deploy/.bashrc"
-curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
-
 # Make .npm dir
 mkdir /home/deploy/.npm
 chown deploy:deploy /home/deploy/.npm
+
+su deploy <<'EOF'
+# Install nvm
+export PROFILE="/home/deploy/.bashrc"
+curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
 
 # Install node
 nvm install 0.12.0
@@ -50,3 +51,4 @@ curl https://raw.githubusercontent.com/wearearchitect/guides/master/ruby/rhel_ru
 source ~/.bashrc
 
 gem install bundler
+EOF
