@@ -36,6 +36,7 @@ chmod 0600 /swapfile
 mkdir /home/deploy/.npm
 chown deploy:deploy /home/deploy/.npm
 
+# run stuff as deploy
 su deploy <<'EOF'
 # Install nvm
 export PROFILE="/home/deploy/.bashrc"
