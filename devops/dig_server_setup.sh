@@ -21,7 +21,7 @@ else
 fi
 
 # Add ll to profile
-echo 'alias ll="ls -alh --color"' >> ~/.bashrc
+echo 'alias ll="ls -alh --color"' >> /home/deploy/.bashrc
 
 # Make a swapfile
 dd if=/dev/zero of=/swapfile bs=1024 count=512k # might be able to beef these numbers up a bit
@@ -33,8 +33,12 @@ chown root:root /swapfile
 chmod 0600 /swapfile
 
 # Install nvm
-export PROFILE="~/.bashrc"
+export PROFILE="/home/deploy/.bashrc"
 curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
+
+# Make .npm dir
+mkdir /home/deploy/.npm
+chown deploy:deploy /home/deploy/.npm
 
 # Install node
 nvm install 0.12.0
