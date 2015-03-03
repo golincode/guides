@@ -1,6 +1,6 @@
 # get apache the fuck off this system
 echo "Remove Apache et al from the system"
-yum erase httpd httpd-tools apr apr-util
+yum -y erase httpd httpd-tools apr apr-util
 
 # update packages and remove obsolete ones
 echo "Updating..."
