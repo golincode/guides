@@ -53,6 +53,9 @@ source ~/.bashrc
 nvm install 0.12.0
 nvm alias default 0.12.0
 
+# source the profile
+source ~/.bashrc
+
 # Install grunt
 npm install -g grunt-cli
 
