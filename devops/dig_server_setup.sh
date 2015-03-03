@@ -41,7 +41,7 @@ mkdir /home/deploy/.npm
 chown deploy:deploy /home/deploy/.npm
 
 # run stuff as deploy
-su deploy <<'EOF'
+su - deploy <<'EOF'
 # Install nvm
 export PROFILE="/home/deploy/.bashrc"
 curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
