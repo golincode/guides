@@ -1,10 +1,10 @@
-# update packages and remove obsolete ones
-echo "Updating..."
-yum update
-
 # get apache the fuck off this system
 echo "Remove Apache et al from the system"
 yum erase httpd httpd-tools apr apr-util
+
+# update packages and remove obsolete ones
+echo "Updating..."
+yum update
 
 if id -u "deploy" >/dev/null 2>&1; then
 	echo "User exists, skipping"
@@ -22,6 +22,15 @@ fi
 
 # Add ll to profile
 echo 'alias ll="ls -alh --color"' >> ~/.bashrc
+
+# Make a swapfile
+dd if=/dev/zero of=/swapfile bs=1024 count=512k # might be able to beef these numbers up a bit
+mkswap /swapfile
+swapon /swapfile
+echo "/swapfile       none    swap    sw      0       0" >> /etc/fstab
+echo 0 | sudo tee /proc/sys/vm/swappiness
+chown root:root /swapfile
+chmod 0600 /swapfile
 
 # Install nvm
 # Might need to set PROFILE to make nvm write to ~/.bashrc
