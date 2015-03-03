@@ -33,7 +33,7 @@ chown root:root /swapfile
 chmod 0600 /swapfile
 
 # Install nvm
-# Might need to set PROFILE to make nvm write to ~/.bashrc
+export PROFILE="~/.bashrc"
 curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
 
 # Install Ruby 2.2.0 & Bundler
