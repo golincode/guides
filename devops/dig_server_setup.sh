@@ -15,3 +15,6 @@ else
   # refine this to what it needs
 	echo "deploy	ALL=(ALL:ALL) ALL" >> /etc/sudoers
 fi
+
+# Add ll to profile
+echo 'alias ll="ls -alh --color"' >> ~/.bashrc
