@@ -8,7 +8,7 @@ yum -y upgrade
 
 # install stuff we need, php/nginx/etc
 echo "Installing required packages..."
-yum install -y nginx php55 php55-cli php55-fpm php55-devel php55-common php55-mcrypt php55-mysqlnd php55-gd
+yum install -y nginx php55 php55-cli php55-fpm php55-devel php55-common php55-mcrypt php55-mysqlnd php55-gd git
 
 if id -u "deploy" >/dev/null 2>&1; then
 	echo "User exists, skipping"
@@ -45,6 +45,9 @@ su deploy <<'EOF'
 # Install nvm
 export PROFILE="/home/deploy/.bashrc"
 curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
+
+# source the profile
+source ~/.bashrc
 
 # Install node
 nvm install 0.12.0
