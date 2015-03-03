@@ -23,7 +23,9 @@ fi
 # Add ll to profile
 echo 'alias ll="ls -alh --color"' >> ~/.bashrc
 
-
+# Install nvm
+# Might need to set PROFILE to make nvm write to ~/.bashrc
+curl https://raw.githubusercontent.com/creationix/nvm/v0.23.3/install.sh | bash
 
 # Install Ruby 2.2.0 & Bundler
 curl https://raw.githubusercontent.com/wearearchitect/guides/master/ruby/rhel_ruby.sh | bash
