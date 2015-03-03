@@ -79,13 +79,11 @@ gem install bundler
 EOF
 
 # start nginx if it isn't running
-start_service nginx
+service=nginx
 
-function start_service {
-  if (( $(ps -ef | grep -v grep | grep $1 | wc -l) > 0 ))
-  then
-  echo "$1 is running!!!"
-  else
-  /etc/init.d/$1 start
-  fi
-}
+if (( $(ps -ef | grep -v grep | grep $service | wc -l) > 0 ))
+then
+echo "$service is running!!!"
+else
+/etc/init.d/$service start
+fi
