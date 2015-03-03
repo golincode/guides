@@ -6,6 +6,10 @@ yum erase httpd httpd-tools apr apr-util
 echo "Updating..."
 yum update
 
+# install stuff we need, php/nginx/etc
+echo "Installing required packages..."
+yum install -y nginx php55 php55-cli php55-fpm php55-devel php55-common php55-mcrypt php55-mysqlnd php55-gd
+
 if id -u "deploy" >/dev/null 2>&1; then
 	echo "User exists, skipping"
 else
