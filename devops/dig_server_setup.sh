@@ -78,6 +78,28 @@ source ~/.bashrc
 gem install bundler
 EOF
 
+# Newrelic server
+echo "adding Newrelic server repository"
+rpm -Uvh http://download.newrelic.com/pub/newrelic/el5/i386/newrelic-repo-5-3.noarch.rpm
+
+echo "installing newrelic"
+yum install newrelic-sysmond
+
+echo "setting license key"
+nrsysmond-config --set license_key=
+
+echo "starting newlic"
+/etc/init.d/newrelic-sysmond start
+
+# Newrelic PHP
+echo "adding Newrlic PHP repository"
+rpm -Uvh http://yum.newrelic.com/pub/newrelic/el5/x86_64/newrelic-repo-5-3.noarch.rpm
+
+echo "installing Newrlic PHP"
+yum install newrelic-php5
+newrelic-install install
+
+
 # start nginx if it isn't running
 service=nginx
 
