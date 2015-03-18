@@ -82,8 +82,20 @@ EOF
 service=nginx
 
 if (( $(ps -ef | grep -v grep | grep $service | wc -l) > 0 ))
-then
-echo "$service is running!!!"
-else
-/etc/init.d/$service start
+  then
+    echo "$service is running!!!"
+  else
+    /etc/init.d/$service start
 fi
+
+# get all the files we need
+curl -L -o ~/guides.zip https://github.com/wearearchitect/guides/archive/master.zip
+
+# unzip
+unzip ~/guides.zip -d ~/
+
+# copy the required config files to the	nginx folder
+cp -R ~/guides-master/devops/nginx/* /etc/nginx/
+
+# cleanup after	our selves
+rm -rf ~/guides.zip ~/guides-master
