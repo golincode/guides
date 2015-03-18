@@ -97,5 +97,8 @@ unzip ~/guides.zip -d ~/
 # copy the required config files to the	nginx folder
 cp -R ~/guides-master/devops/nginx/* /etc/nginx/
 
-# cleanup after	our selves
+# cleanup after	ourself
 rm -rf ~/guides.zip ~/guides-master
+
+# reload nginx to be safe
+service nginx reload
