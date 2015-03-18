@@ -5,8 +5,8 @@ domain=$1
 
 # check a domain arg was passed
 if [ -z "$domain" ]
-    then
-        echo "ERR: No domain passed" 1>&2 ; exit 1;
+  then
+    echo "ERR: No domain passed" 1>&2 ; exit 1;
 fi
 
 # create the folder structure
@@ -18,11 +18,11 @@ echo "creating nginx site config"
 cp /etc/nginx/sites-available/default.conf /etc/nginx/sites-available/$domain
 
 # setup the config. (Both www and non-www)
-sed -i.bak s/NON_WWW_DOMAIN/$($domain#www.)/g /etc/nginx/sites-available/$domain
+sed -i.bak s/NON_WWW_DOMAIN/${domain#"www."}/g /etc/nginx/sites-available/$domain
 sed -i.bak s/WWW_DOMAIN/$domain/g /etc/nginx/sites-available/$domain
 
-
 # link in the new config
+echo "creating symlink"
 ln -s /etc/nginx/sites-available/$domain /etc/nginx/sites-enabled/
 
 # restart nginx
