@@ -96,9 +96,8 @@ echo "adding Newrlic PHP repository"
 rpm -Uvh http://yum.newrelic.com/pub/newrelic/el5/x86_64/newrelic-repo-5-3.noarch.rpm
 
 echo "installing Newrlic PHP"
-yum install newrelic-php5
-newrelic-install install
-
+yum install -y newrelic-php5
+newrelic-install install -y
 
 # start nginx if it isn't running
 service=nginx
