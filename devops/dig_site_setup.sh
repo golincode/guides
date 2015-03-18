@@ -21,7 +21,7 @@ cp /etc/nginx/sites-available/default.conf /etc/nginx/sites-available/$domain
 sed -i.bak s/YOURDOMAINHERE/$domain/g /etc/nginx/sites-available/$domain
 
 # link in the new config
-ln -s /etc/nginx/sites-available/$domain /etc/nginx/sites-eneabled/
+ln -s /etc/nginx/sites-available/$domain /etc/nginx/sites-enabled/
 
 # restart nginx
 echo "reloading nginx"

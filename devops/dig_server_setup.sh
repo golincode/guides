@@ -97,6 +97,9 @@ unzip ~/guides.zip -d ~/
 # copy the required config files to the	nginx folder
 cp -R ~/guides-master/devops/nginx/* /etc/nginx/
 
+# make sure there's also a sites-enabled folder
+mkdir /etc/nginx/sites-enabled
+
 # cleanup after	ourself
 rm -rf ~/guides.zip ~/guides-master
 
