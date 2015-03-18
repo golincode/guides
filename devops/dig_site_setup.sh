@@ -17,8 +17,10 @@ mkdir -p /data/www/$domain/{current,shared,shared/node_modules,shared/public/wp-
 echo "creating nginx site config"
 cp /etc/nginx/sites-available/default.conf /etc/nginx/sites-available/$domain
 
-# setup the config
-sed -i.bak s/YOURDOMAINHERE/$domain/g /etc/nginx/sites-available/$domain
+# setup the config. (Both www and non-www)
+sed -i.bak s/NON_WWW_DOMAIN/$($domain#www.)/g /etc/nginx/sites-available/$domain
+sed -i.bak s/WWW_DOMAIN/$domain/g /etc/nginx/sites-available/$domain
+
 
 # link in the new config
 ln -s /etc/nginx/sites-available/$domain /etc/nginx/sites-enabled/
