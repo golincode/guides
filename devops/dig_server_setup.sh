@@ -83,7 +83,7 @@ echo "adding Newrelic server repository"
 rpm -Uvh http://download.newrelic.com/pub/newrelic/el5/i386/newrelic-repo-5-3.noarch.rpm
 
 echo "installing newrelic"
-yum install newrelic-sysmond
+yum install -y newrelic-sysmond
 
 echo "setting license key"
 nrsysmond-config --set license_key=
@@ -97,7 +97,7 @@ rpm -Uvh http://yum.newrelic.com/pub/newrelic/el5/x86_64/newrelic-repo-5-3.noarc
 
 echo "installing Newrlic PHP"
 yum install -y newrelic-php5
-newrelic-install install -y
+newrelic-install install
 
 # start nginx if it isn't running
 service=nginx
