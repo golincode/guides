@@ -12,8 +12,8 @@ if [[ ! -d ~/.rbenv ]]; then
   git clone https://github.com/maljub01/rbenv-bundle-exec.git ~/.rbenv/plugins/rbenv-bundle-exec
 fi
 
-/home/vagrant/.rbenv/bin/rbenv install -s 2.2.0
-/home/vagrant/.rbenv/bin/rbenv global 2.2.0
+/home/vagrant/.rbenv/bin/rbenv install -s 2.2.2
+/home/vagrant/.rbenv/bin/rbenv global 2.2.2
 
 source ~/.bashrc
 
