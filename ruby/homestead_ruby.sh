@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 if [[ ! -d ~/.rbenv ]]; then
   echo "Installing rbenv"
   git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
