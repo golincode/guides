@@ -72,10 +72,10 @@ Install the Bundle Exec plugin, this will prepend `bundle exec` to certain comma
 
 Rbenv will support multiple versions of Ruby and in turn, multiple gem versions. To install a Ruby, run:
 
-	$ rbenv install 2.2.0
+	$ rbenv install 2.2.2
 
 When this has completed, run:
 
-	$ rbenv global 2.2.0
+	$ rbenv global 2.2.2
 
 This will set your global Ruby to the specified version.
