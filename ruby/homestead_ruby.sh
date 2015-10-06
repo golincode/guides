@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+apt-get install -y libreadline-dev
+
 if [[ ! -d ~/.rbenv ]]; then
   echo "Installing rbenv"
   git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
