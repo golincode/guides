@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-apt-get install -y libreadline-dev
+sudo apt-get install -y libreadline-dev
 
 if [[ ! -d ~/.rbenv ]]; then
   echo "Installing rbenv"
